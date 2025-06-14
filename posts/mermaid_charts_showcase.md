@@ -214,19 +214,19 @@ pie title Development Time Distribution
 gitgraph
     commit id: "Initial commit"
     commit id: "Add basic blog"
-    branch feature/mermaid
-    checkout feature/mermaid
+    branch "feature/mermaid"
+    checkout "feature/mermaid"
     commit id: "Add Mermaid.js"
     commit id: "Enhance charts"
-    checkout main
+    checkout "main"
     commit id: "Fix bug"
-    merge feature/mermaid
+    merge "feature/mermaid"
     commit id: "Update documentation"
-    branch feature/search
-    checkout feature/search
+    branch "feature/search"
+    checkout "feature/search"
     commit id: "Add search functionality"
-    checkout main
-    merge feature/search
+    checkout "main"
+    merge "feature/search"
     commit id: "Release v2.1.0"
 ```
 
