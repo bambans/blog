@@ -211,23 +211,50 @@ pie title Development Time Distribution
 
 ### Feature Branch Workflow
 ```mermaid
-gitgraph
-    commit id: "Initial commit"
-    commit id: "Add basic blog"
-    branch "feature/mermaid"
-    checkout "feature/mermaid"
-    commit id: "Add Mermaid.js"
-    commit id: "Enhance charts"
-    checkout "main"
-    commit id: "Fix bug"
-    merge "feature/mermaid"
-    commit id: "Update documentation"
-    branch "feature/search"
-    checkout "feature/search"
-    commit id: "Add search functionality"
-    checkout "main"
-    merge "feature/search"
-    commit id: "Release v2.1.0"
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': false,'showCommitLabel': false}} }%%
+      gitGraph
+        commit
+        branch hotfix
+        checkout hotfix
+        commit
+        branch develop
+        checkout develop
+        commit id:"ash"
+        branch featureB
+        checkout featureB
+        commit type:HIGHLIGHT
+        checkout main
+        checkout hotfix
+        commit type:NORMAL
+        checkout develop
+        commit type:REVERSE
+        checkout featureB
+        commit
+        checkout main
+        merge hotfix
+        checkout featureB
+        commit
+        checkout develop
+        branch featureA
+        commit
+        checkout develop
+        merge hotfix
+        checkout featureA
+        commit
+        checkout featureB
+        commit
+        checkout develop
+        merge featureA
+        branch release
+        checkout release
+        commit
+        checkout main
+        commit
+        checkout release
+        merge main
+        checkout develop
+        merge release
+
 ```
 
 ## State Diagrams
